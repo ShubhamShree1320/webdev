@@ -1,0 +1,27 @@
+{
+  "name": "prisma_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "cd dist && node index.js",
+    "generate": "npx prisma generate",
+    "push": "prisma db push",
+    "build_start": "npx prisma db push&&npm run build && npm run start",
+    "reset": "npx prisma migrate reset --force"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "nodemon": "^3.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.3.0",
+    "prisma": "^5.18.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
